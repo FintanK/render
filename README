@@ -1,0 +1,33 @@
+Render
+
+A best practice web app that focuses on speed.
+
+Features
+
+- Support for retina images and icons which will be scaled down for smaller devices.
+- Uses the fullscreen API
+- WebP for Google Chrome, Opera and the native Android Browser.
+- Takes a screenshot of the application running (Make sure phantom is installed and in the PATH)
+
+Let's get started
+
+1. Install dependencies (--save-dev writes to package.json)
+
+    npm install
+    npm install -g bower
+    npm install -g grunt
+
+    bower install (load libraries)
+
+2. Let's create our build
+
+    grunt
+    grunt production
+
+
+3. Run the project
+
+This project runs on port 3000 for development purposes but feel free to change it for your own purposes (server.js)
+
+    grunt serve
+
