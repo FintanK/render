@@ -1,5 +1,8 @@
 module.exports = function(grunt) {
 
+    // require it at the top and pass in the grunt instance
+    require('time-grunt')(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         // watch assets, concatenate files compile Sass
@@ -8,7 +11,7 @@ module.exports = function(grunt) {
         },
         watch: {
             html: {
-                files: ['src/index.html'],
+                files: ['src/*.html'],
                 tasks: ['htmlmin:dev'],
                 options: {
                     spawn: false
@@ -69,6 +72,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+        autoprefixer: {
+            css: {
+                files: {
+                    'public/css/production.css': 'public/css/production.css'
+                }
+            }
+        },
         htmlmin: {
             prod: {
                 options: {
@@ -76,12 +86,14 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    'public/index.html': 'src/index.html'
+                    'public/index.html': 'src/index.html',
+                    'public/getstarted.html': 'src/getstarted.html'
                 }
             },
             dev: {
                 files: {
-                    'public/index.html': 'src/index.html'
+                    'public/index.html': 'src/index.html',
+                    'public/getstarted.html': 'src/getstarted.html'
                 }
             }
         },
@@ -105,17 +117,47 @@ module.exports = function(grunt) {
                 options: {
                     sizes: [{
                         width: 320,
+                        height: 240
                     },{
-                        width: 640,
+                        name: 'large',
+                        width: 640
                     },{
+                        name: "large",
                         width: 1024,
+                        suffix: "_x2",
+                        quality: 60
                     }]
                 },
                 files: [{
                     expand: true,
-                    src: ['src/img/**.{jpg,gif,png,ico}'],
-                    cwd: 'src/img/build/',
-                    custom_dest: 'src/img/build//{%= width %}/'
+                    src: ['assets/**.{jpg,gif,png}'],
+                    cwd: 'test/',
+                    dest: 'tmp/'
+                }]
+            }
+        },
+        responsive_images: {
+            icons: {
+                options: {
+                    sizes: [{
+                        name: 'large',
+                        width: 320,
+                        height: 320
+                    },{
+                        name: 'medium',
+                        width: 128,
+                        height: 128
+                    },{
+                        name: "small",
+                        width: 64,
+                        height: 64
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['src/img/icons/png/*.png}'],
+                    cwd: 'src/img/icons/png',
+                    dest: 'public/src/img/icons'
                 }]
             }
         },
@@ -125,11 +167,11 @@ module.exports = function(grunt) {
                 // An array of filename / source images array pairs. The basename of the sprite file
                 // is also prefixed to the CSS classes.
                 sprites: {
-                    "sprite.png": ['src/images/**/*.png']
+                    "public/img/sprite.png": ['src/images/icons/png/*.png']
                 },
 
                 // The destination for the build stylesheet
-                sheet: "src/css/sprites.css",
+                sheet: "public/css/sprites.css"
             }
         },
         webp: {
@@ -185,7 +227,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'public/img/app.svg': 'src/img/app.svg'
+                    'public/img/icons/svg/app.svg': 'src/img/icons/svg/*.svg'
                 }
             }
         },
@@ -229,7 +271,7 @@ module.exports = function(grunt) {
             generate: {
                 options: {
                     basePath: '',
-                    cache: ['public/js/app.js', 'public/css/app.css'],
+                    cache: ['public/js/app.js', 'public/css/app.css','public/css/*.html', 'public/img/*.png'],
                     network: ['http://*', 'https://*'],
                     fallback: ['/ /offline.html'],
                     exclude: ['js/jquery.min.js'],
@@ -252,7 +294,7 @@ module.exports = function(grunt) {
                 nokey: true,
                 url: "https://developers.google.com"
             },
-            prod: {
+            mobile: {
                 options: {
                     url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
                     locale: "en_GB",
@@ -260,7 +302,7 @@ module.exports = function(grunt) {
                     threshold: 80
                 }
             },
-            paths: {
+            desktop: {
                 options: {
                     paths: ["/speed/docs/insights/v1/getting_started", "/speed/docs/about"],
                     locale: "en_GB",
@@ -285,7 +327,7 @@ module.exports = function(grunt) {
 
                     },
 
-                    port: 3001,
+                    port: 3004,
 
                     // Set --debug
                     debug: true
@@ -322,15 +364,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.loadNpmTasks('grunt-spritesheet');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-manifest');
     grunt.loadNpmTasks('grunt-webp');
     grunt.loadNpmTasks('grunt-pagespeed');
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
-    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'uglify', 'newer:imagemin:dynamic','notify:server']);
-    grunt.registerTask('production', ['htmlmin:prod', 'concat', 'sass', 'uglify', 'cssmin', 'newer:imagemin:dynamic','notify:server']);
+    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images:icons', 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
+    grunt.registerTask('build', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server', 'pagespeed:mobile', 'pagespeed:desktop']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('serve:production', ['express:dev']);
     grunt.registerTask('test', []);

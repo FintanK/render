@@ -1,15 +1,31 @@
-Render
+# Render
 
-A best practice web app that focuses on speed.
+A Node.js and Grunt boilerplate that focuses on speed.
 
-Features
+# Features
+
+- Auto generated manifest file
+- Asset concatenation
+- SASS
+- Automatic CSS prefixing for browser compatibility
+- Auto-generated spritesheets with background positions
+- HTML, CSS, JS and image minification
+- Further compression of assets using express
+- Development and production builds with a watcher to kick off builds when changes are made in development
+- Native notification when builds are complete
+- Production builds run against pagespeed for feedback on app performance
+
+# TO DO
 
 - Support for retina images and icons which will be scaled down for smaller devices.
-- Uses the fullscreen API
+- Implement responsive HTML5 picture element example
+- Use the fullscreen API
 - WebP for Google Chrome, Opera and the native Android Browser.
-- Takes a screenshot of the application running (Make sure phantom is installed and in the PATH)
+- Take a screenshot of the application running (Make sure phantom is installed and in the PATH)
+- Implement unit and behavioural tests (basic templating)
 
-Let's get started
+
+# Let's get started
 
 1. Install dependencies (--save-dev writes to package.json)
 
@@ -17,13 +33,14 @@ Let's get started
     npm install -g bower
     npm install -g grunt
 
+    brew install ImageMagick
+
     bower install (load libraries)
 
 2. Let's create our build
 
     grunt
     grunt production
-
 
 3. Run the project
 

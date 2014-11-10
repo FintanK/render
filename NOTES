@@ -18,12 +18,7 @@ Not using angular for this project. This one is a focus on usability.
 - Getting started guide
 - Links
 
-
 Generate sprites for icons only.
 Combine with downscaling icon sizes and create spritesheets for different icon sizes.
 
-
-Take inspiration from the following.
-https://github.com/use-init/init
-http://shoogledesigns.com/blog/blog/2014/01/14/grunt-js-boilerplate/
-http://www.smashingmagazine.com/2014/02/20/kickstart-your-project-with-init-and-grunt/
+Automated testing.
