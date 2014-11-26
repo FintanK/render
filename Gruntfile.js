@@ -112,55 +112,6 @@ module.exports = function(grunt) {
                 dest: 'public/js/production.js'
             }
         },
-        responsive_images: {
-            myTask: {
-                options: {
-                    sizes: [{
-                        width: 320,
-                        height: 240
-                    },{
-                        name: 'large',
-                        width: 640
-                    },{
-                        name: "large",
-                        width: 1024,
-                        suffix: "_x2",
-                        quality: 60
-                    }]
-                },
-                files: [{
-                    expand: true,
-                    src: ['assets/**.{jpg,gif,png}'],
-                    cwd: 'test/',
-                    dest: 'tmp/'
-                }]
-            }
-        },
-        responsive_images: {
-            icons: {
-                options: {
-                    sizes: [{
-                        name: 'large',
-                        width: 320,
-                        height: 320
-                    },{
-                        name: 'medium',
-                        width: 128,
-                        height: 128
-                    },{
-                        name: "small",
-                        width: 64,
-                        height: 64
-                    }]
-                },
-                files: [{
-                    expand: true,
-                    src: ['src/img/icons/png/*.png}'],
-                    cwd: 'src/img/icons/png',
-                    dest: 'public/src/img/icons'
-                }]
-            }
-        },
         favicons: {
             options: {},
             icons: {
@@ -370,7 +321,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-spritesheet');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-manifest');
@@ -381,8 +331,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-favicons');
 
-    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images:icons', 'favicons:icons', 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
-    grunt.registerTask('build', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images:icons', 'favicons:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server', 'pagespeed:mobile', 'pagespeed:desktop']);
+    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'favicons:icons', 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
+    grunt.registerTask('build', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'favicons:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server', 'pagespeed:mobile', 'pagespeed:desktop']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('serve:production', ['express:dev']);
     grunt.registerTask('test', []);

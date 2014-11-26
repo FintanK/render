@@ -5,58 +5,122 @@
     <title>Render</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 
     <meta name="description" content="A best practice web app that focuses on speed.">
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
-    <!-- OGP + Twitter tags -->
+    <!-- IE -->
+    <meta http-equiv='Page-Enter' content='RevealTrans(Duration=2.0,Transition=2)'>
+    <meta http-equiv='Page-Exit' content='RevealTrans(Duration=3.0,Transition=12)'>
+    <meta name='mssmarttagspreventparsing' content='true'>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta name='msapplication-starturl' content='http://blog.reybango.com/about/'>
+    <meta name='msapplication-window' content='width=800;height=600'>
+    <meta name='msapplication-navbutton-color' content='red'>
+    <meta name='application-name' content='render'>
+    <meta name='msapplication-tooltip' content='Launch Render'>
+    <meta name='msapplication-task' content='name=About;action-uri=/about/;icon-uri=/images/about.ico'>
+    <meta name='msapplication-task' content='name=The Big List;action-uri=/the-big-list-of-javascript-css-and-html-development-tools-libraries-projects-and-books/;icon-uri=/images/list_links.ico'>
+    <meta name='msapplication-task' content='name=jQuery Posts;action-uri=/category/jquery/;icon-uri=/images/jquery.ico'>
+    <meta name='msapplication-task' content='name=Start Developing;action-uri=/category/javascript/;icon-uri=/images/script.ico'>
+    <meta name='msvalidate.01' content='6E3AD52DC176461A3C81DD6E98003BC9'>
+    <meta http-equiv='cleartype' content='on'>
+
+    <!-- OGP -->
     <meta property="og:title" content="flash.com">
     <meta property="og:description" content="A boilerplate web app that focuses on speed.">
-    <meta property="og:image" content="flash.png">
+    <meta property="og:image" content="/img/logo.png">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="250">
-    <meta property="og:image:height" content="250">
+    <meta property="og:image:width" content="450">
+    <meta property="og:image:height" content="358">
     <meta property="og:type" content="website">
 
+    <!-- Twitter tags -->
     <meta name="twitter:card" content="Flash">
     <meta name="”twitter:title”" content="”Flash”">
     <meta name="”twitter:description”" content="”A boilerplate web app that focuses on speed.">
     <meta name="”twitter:image”" content="Flash.png">
 
-    <link rel="stylesheet" href="css/production.css"/>
+    <!-- IOS -->
+    <meta name="apple-mobile-web-app-title" content="Render"> <!-- New in iOS6 -->
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+    <meta name='format-detection' content='telephone=no'>
+
+    <link href='/img/apple-touch-icon.png' rel='apple-touch-icon' type='image/png'>
+    <link href='img/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='img/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon' sizes='114x114'>
+    <link href='img/startup.png' rel='apple-touch-startup-image'>
+    <link href='img/apple-touch-icon-152x152-precomposed.png' sizes='152x152' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-144x144-precomposed.png' sizes='144x144' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-120x120-precomposed.png' sizes='120x120' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-114x114-precomposed.png' sizes='114x114' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-72x72-precomposed.png' sizes='72x72' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-60x60-precomposed.png' sizes='60x60' rel='apple-touch-icon-precomposed'>
+
+    <!-- Windows 8 Tiles -->
+    <meta name="application-name" content=" Contoso" />
+    <meta name="msapplication-TileColor" content=" #009900" />
+    <meta name="msapplication-square70x70logo" content="images/smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="images/mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="images/widetile.png" />
+    <meta name="msapplication-square310x310logo" content="images/largetile.png" />
+    <meta name="msapplication-notification" content="frequency=30; polling-uri=notifications/contoso1.xml;polling-uri2=notifications/contoso2.xml; polling-uri3=notifications/contoso3.xml" />
+
+    <!-- Dublin Core -->
+    <link rel="schema.DC" href="http://www.purl.org/dc/elements/1.1/" />
+    <meta name="DC.title" content="DC Dublin Core META Tags: DCMI Dublin Core Metadata Initiative" />
+    <meta name="DC.creator" content="Administrator" />
+    <meta name="DC.subject" content="DCMI Dublin Core Metadata Initiative; DC META Tags" />
+    <meta name="DC.description" content="Examples of Dublin Core META Tags." />
+    <meta name="DC.publisher" content="SEO Consultants Directory" />
+    <meta name="DC.contributor" content="DCMI Dublin Core Metadata Initiative" />
+    <meta name="DC.date" scheme="W3CDTF" content="2004-01-01" />
+    <meta name="DC.type" scheme="DCMIType" content="Text" />
+    <meta name="DC.format" scheme="IMT" content="text/html" />
+    <meta name="DC.identifier" content="/meta-tags/dublin/" />
+    <meta name="DC.source" content="/meta-tags/" />
+    <meta name="DC.language" scheme="RFC1766" content="en" />
+    <meta name="DC.relation" content="/meta-tags/" />
+    <meta name="DC.coverage" content="World" />
+
+    <link rel="stylesheet" href="css/production.css">
 
 </head>
 <body>
 <section id="welcome">
-<div class="container">
+    <div class="container">
         <div id="logo" class="col-sm-4">
-            <img src="/img/logo.png" height="50" width="65"/>
+            <img src="/img/logo.png" height="50" width="65">
             <h1>Render</h1>
         </div>
         <div class="col-sm-8">
             <nav>
                 <ul>
-                    <li><a href = "start.html">Getting Started</a></li>
-                    <li><a href = "">Documentation</a></li>
-                    <li><a href = "">Further Reading</a></li>
+                    <li><a href="start.html">Getting Started</a></li>
+                    <li><a href="">Documentation</a></li>
+                    <li><a href="">Further Reading</a></li>
                 </ul>
             </nav>
         </div>
-    <div class="promo col-sm-12">
-        <h1>A Node.js and Grunt boilerplate that's all about <strong>speed</strong> and <strong>performance</strong></h1>
-    </div>
-    <div class="description col-sm-12">
-        <p>Automate the task of ensuring your best practice web app is optimized for delivery to mobile, tablet and desktop. Reduce loading times and keep your users engaged.</p>
-    </div>
-    <div class="description download col-sm-12">
-        <button type="button" class="btn btn-default">Download v1.0.0</button>
-        <button type="button" class="btn btn-default">View on Github</button>
-    </div>
-<div>
-</section>
+        <div class="promo col-sm-12">
+            <h1>A Node.js and Grunt boilerplate that's all about <strong>speed</strong> and <strong>performance</strong></h1>
+        </div>
+        <div class="description col-sm-12">
+            <p>Automate the task of ensuring your best practice web app is optimized for delivery to mobile, tablet and desktop. Reduce loading times and keep your users engaged.</p>
+        </div>
+        <div class="description download col-sm-12">
+            <button type="button" class="btn btn-default">Download v1.0.0</button>
+            <button type="button" class="btn btn-default">View on Github</button>
+        </div>
+        <div>
+        </div></div></section>
 
 <section id="features">
     <div class="container">
@@ -107,12 +171,12 @@
 </section>
 
 <!--<picture>-->
-    <!--&lt;!&ndash;[if IE 9]><video style="display: none;"><![endif]&ndash;&gt;-->
-    <!--<source srcset="wedding-large.jpg" media="(min-width: 820px)" />-->
-    <!--<source srcset="wedding-medium.jpg" media="(min-width: 640px)" />-->
-    <!--<source srcset="wedding-small.jpg" />-->
-    <!--&lt;!&ndash;[if IE 9]></video><![endif]&ndash;&gt;-->
-    <!--<img src="wedding-small.jpg" alt="Wedding Day" />-->
+<!--&lt;!&ndash;[if IE 9]><video style="display: none;"><![endif]&ndash;&gt;-->
+<!--<source srcset="wedding-large.jpg" media="(min-width: 820px)" />-->
+<!--<source srcset="wedding-medium.jpg" media="(min-width: 640px)" />-->
+<!--<source srcset="wedding-small.jpg" />-->
+<!--&lt;!&ndash;[if IE 9]></video><![endif]&ndash;&gt;-->
+<!--<img src="wedding-small.jpg" alt="Wedding Day" />-->
 <!--</picture>-->
 
 <script type="text/javascript" src="/js/production.js"></script>

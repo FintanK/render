@@ -9,6 +9,7 @@ A Node.js and Grunt boilerplate that focuses on speed.
 - SASS
 - Automatic CSS prefixing for browser compatibility
 - Auto-generated spritesheets with background positions
+- Auto-generated favicons, IOS icons, Win 8 tiles.
 - HTML, CSS, JS and image minification
 - Further compression of assets using express
 - Development and production builds with a watcher to kick off builds when changes are made in development
@@ -17,7 +18,8 @@ A Node.js and Grunt boilerplate that focuses on speed.
 
 # TO DO
 
-- Finish favicon, icon generation and impelement required meta tags
+- Tidy up and verify meta tags, generate startup image for IOS when added to home screen.
+- Integrate spritesheet positions with SASS
 - Support for retina images and icons which will be scaled down for smaller devices.
 - Implement responsive HTML5 picture element example
 - Use the fullscreen API
