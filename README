@@ -17,6 +17,7 @@ A Node.js and Grunt boilerplate that focuses on speed.
 
 # TO DO
 
+- Finish favicon, icon generation and impelement required meta tags
 - Support for retina images and icons which will be scaled down for smaller devices.
 - Implement responsive HTML5 picture element example
 - Use the fullscreen API
@@ -33,7 +34,7 @@ A Node.js and Grunt boilerplate that focuses on speed.
     npm install -g bower
     npm install -g grunt
 
-    brew install ImageMagick
+    brew install ImageMagick (OSX) / apt-get install imagemagick (Ubuntu)
 
     bower install (load libraries)
 

@@ -161,6 +161,13 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        favicons: {
+            options: {},
+            icons: {
+                src: 'src/img/logo.png',
+                dest: 'public/img'
+            }
+        },
         spritesheet: {
             generate: {
 
@@ -372,9 +379,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-favicons');
 
-    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images:icons', 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
-    grunt.registerTask('build', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server', 'pagespeed:mobile', 'pagespeed:desktop']);
+    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images:icons', 'favicons:icons', 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
+    grunt.registerTask('build', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images:icons', 'favicons:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server', 'pagespeed:mobile', 'pagespeed:desktop']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('serve:production', ['express:dev']);
     grunt.registerTask('test', []);
