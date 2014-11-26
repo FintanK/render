@@ -254,15 +254,15 @@ module.exports = function(grunt) {
             },
             mobile: {
                 options: {
-                    url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
+                    url: "http://localhost:3004",
                     locale: "en_GB",
-                    strategy: "desktop",
+                    strategy: "mobile",
                     threshold: 80
                 }
             },
             desktop: {
                 options: {
-                    paths: ["/speed/docs/insights/v1/getting_started", "/speed/docs/about"],
+                    paths: ["http://localhost:3004"],
                     locale: "en_GB",
                     strategy: "desktop",
                     threshold: 80
@@ -332,9 +332,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-favicons');
 
     grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'favicons:icons', 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
-    grunt.registerTask('build', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'favicons:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server', 'pagespeed:mobile', 'pagespeed:desktop']);
+    grunt.registerTask('production', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'favicons:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('serve:production', ['express:dev']);
+    grunt.registerTask('page-test', ['pagespeed']);
     grunt.registerTask('test', []);
 
 };
