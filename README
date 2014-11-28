@@ -24,6 +24,7 @@ A Node.js and Grunt boilerplate that focuses on speed.
 - WebP for Google Chrome, Opera and the native Android Browser.
 - Take a screenshot of the application running (Make sure phantom is installed and in the PATH)
 - Implement behavioural tests (protractor)
+- Implement JSHint for concatentated JS in development mode.
 - Output pagespeed results
 
 
