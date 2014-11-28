@@ -6,8 +6,12 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         // watch assets, concatenate files compile Sass
-        clean: {
-
+        remove: {
+            options: {
+              trace: true
+            },
+            fileList: ['public/logo-small.png', 'src/logo-small.png'],
+            dirList: []
         },
         watch: {
             html: {
@@ -162,6 +166,23 @@ module.exports = function(grunt) {
                 noAlpha: false,
                 lossless: false
             }
+        },
+        responsive_images: {
+            logo: {
+              options: {
+                sizes: [{
+                  name: "small",
+                  width: 70,
+                  height: 54
+              }]
+              },
+              files: [{
+                expand: true,
+                src: ['logo.png'],
+                cwd: 'src/img', 
+                dest: 'src/img'
+              }]
+            }   
         },
         imagemin: {
             dynamic: {
@@ -330,9 +351,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-favicons');
+    grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.loadNpmTasks('grunt-remove');
 
-    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'favicons:icons', 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
-    grunt.registerTask('production', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'favicons:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server']);
+    grunt.registerTask('default', ['remove', 'htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images' , 'favicons:icons', 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
+    grunt.registerTask('production', ['remove', 'htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'favicons:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('serve:production', ['express:dev']);
     grunt.registerTask('page-test', ['pagespeed']);

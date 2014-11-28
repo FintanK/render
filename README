@@ -20,12 +20,10 @@ A Node.js and Grunt boilerplate that focuses on speed.
 
 - Tidy up and verify meta tags, generate startup image for IOS when added to home screen.
 - Integrate spritesheet positions with SASS
-- Support for retina images and icons which will be scaled down for smaller devices.
-- Implement responsive HTML5 picture element example
 - Use the fullscreen API
 - WebP for Google Chrome, Opera and the native Android Browser.
 - Take a screenshot of the application running (Make sure phantom is installed and in the PATH)
-- Implement unit and behavioural tests (basic templating)
+- Implement behavioural tests (protractor)
 - Output pagespeed results
 
 
@@ -51,4 +49,27 @@ A Node.js and Grunt boilerplate that focuses on speed.
 This project runs on port 3000 for development purposes but feel free to change it for your own purposes (server.js)
 
     grunt serve
+
+# Generated Images
+
+The following images will be generated from src/logo.png and can be customized / removed depending on the needs of your project.
+
+public/favicon.png
+public/logo-small.png
+public/apple-touch-icon-152x152-precomposed.png
+public/apple-touch-icon-144x144-precomposed.png
+public/apple-touch-icon-120x120-precomposed.png
+public/apple-touch-icon-114x114-precomposed.png
+public/apple-touch-icon-76x76-precomposed.png
+public/apple-touch-icon-72x72-precomposed.png
+public/apple-touch-icon-60x60-precomposed.png
+public/apple-touch-icon.png
+public/windows-tile-150x150-precomposed.png
+public/windows-tile-144x144-precomposed.png
+public/windows-tile-310x310-precomposed.png
+public/windows-tile-70x70-precomposed.png
+
+
+
+
 
