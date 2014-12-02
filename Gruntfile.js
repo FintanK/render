@@ -265,7 +265,7 @@ module.exports = function(grunt) {
                     'js/*.min.js',
                     'css/*.css'
                 ],
-                dest: 'manifest.appcache'
+                dest: 'public/manifest.appcache'
             }
         },
         pagespeed: {
