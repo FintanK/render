@@ -121,50 +121,6 @@ module.exports = function(grunt) {
                 dest: 'public/js/production.js'
             }
         },
-        spritesheet: {
-            generate: {
-
-                // An array of filename / source images array pairs. The basename of the sprite file
-                // is also prefixed to the CSS classes.
-                sprites: {
-                    "public/img/sprite.png": ['src/images/icons/png/*.png']
-                },
-
-                // The destination for the build stylesheet
-                sheet: "public/css/sprites.css"
-            }
-        },
-        webp: {
-            files: {
-                //expand: true,
-                //cwd: 'path/to/source/images',
-                src: 'src/img/*.png',
-                dest: 'public/img/'
-            },
-            options: {
-                binpath: require('webp-bin').path,
-                preset: 'photo',
-                verbose: true,
-                quality: 80,
-                alphaQuality: 80,
-                compressionMethod: 6,
-                segments: 4,
-                psnr: 42,
-                sns: 50,
-                filterStrength: 40,
-                filterSharpness: 3,
-                simpleFilter: true,
-                partitionLimit: 50,
-                analysisPass: 6,
-                multiThreading: true,
-                lowMemory: false,
-                alphaMethod: 0,
-                alphaFilter: 'best',
-                alphaCleanup: true,
-                noAlpha: false,
-                lossless: false
-            }
-        },
         responsive_images: {
             logo: {
               options: {
@@ -241,8 +197,8 @@ module.exports = function(grunt) {
                         ]
                     },
                     viewport: ['1024x768', '1920x1080']
-                },
-            },
+                }
+            }
         },
         manifest: {
             generate: {
@@ -339,10 +295,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-spritesheet');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-manifest');
-    grunt.loadNpmTasks('grunt-webp');
     grunt.loadNpmTasks('grunt-pagespeed');
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-compass');
@@ -350,8 +304,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-remove');
 
-    grunt.registerTask('default', ['remove', 'htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'responsive_images' , 'spritesheet:generate', 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server']);
-    grunt.registerTask('production', ['remove', 'htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server']);
+    grunt.registerTask('default', ['remove', 'htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'responsive_images' , 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server']);
+    grunt.registerTask('production', ['remove', 'htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('serve:production', ['express:dev']);
     grunt.registerTask('page-test', ['pagespeed']);
