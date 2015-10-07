@@ -35,15 +35,18 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 
 # Let's get started
 
-1. Install dependencies (--save writes to add dependencies to package.json)
+1. Install dependencies ( --save writes to add dependencies to package.json )
 
     > npm install
+    
     > npm install -g bower
-    > npm install -g grunt
+    
+    > npm install -g grunt-cli
 
     > brew install ImageMagick (OSX) 
     
     > apt-get install imagemagick (Ubuntu)
+    
     > apt-get install graphicsmagick-imagemagick-compat
 
     > bower install (load frontend dependencies)
