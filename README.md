@@ -1,3 +1,9 @@
+![Express](http://nodejs-cloud.com/img/128px/expressjs.png)
+![Grunt](http://jackandrewread.com/img/skills/grunt.png)
+![Bower](http://www.robdudley.com/bower_grunt_yeoman/img/bower-logo.png)
+![Angular](http://share.2sic.com/share/Content/2dm-blogs/2014-10%20JS%20MVC/AngularJS-Square-250.png)
+![Node.js](https://www.a2hosting.com/images/uploads/landing_images/node.js-hosting.png)
+
 # Scaffold
 
 A Node.js and Grunt boilerplate that focuses on automating many frontend tasks that optimize your application development, performance and user experience.
@@ -53,12 +59,6 @@ This project runs on port 3004 for development purposes but feel free to change 
     > grunt serve
     
 Debugger port: 5858
-
-![Express](http://nodejs-cloud.com/img/128px/expressjs.png)
-![Grunt](http://jackandrewread.com/img/skills/grunt.png)
-![Bower](http://www.robdudley.com/bower_grunt_yeoman/img/bower-logo.png)
-![Angular](http://share.2sic.com/share/Content/2dm-blogs/2014-10%20JS%20MVC/AngularJS-Square-250.png)
-![Node.js](https://www.a2hosting.com/images/uploads/landing_images/node.js-hosting.png)
 
 
 
