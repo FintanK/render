@@ -1,8 +1,10 @@
 {
-  "name": "Render",
+  "name": "Scaffold",
   "description": "A boilerplate web app that focuses on speed",
   "version": "1.0.0",
   "dependencies": {
-    "bootstrap-sass-official": "~3.3.5"
+    "bootstrap-sass-official": "~3.3.5",
+    "angular": "~1.4.7",
+    "angular-sanitize": "~1.4.7"
   }
 }

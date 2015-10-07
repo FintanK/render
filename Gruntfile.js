@@ -30,9 +30,7 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: [
-                    "src/js/app.js",
-                    "src/js/services.js",
-                    "src/js/controllers.js",
+                    "src/js/*/*.js",
                 ],
                 tasks: ['concat:js'],
                 options: {
@@ -59,9 +57,16 @@ module.exports = function(grunt) {
             js: {
                 src: [
                     "bower_components/jquery/dist/jquery.min.js",
+                    "bower_components/angular/angular.min.js",
+                    "bower_components/angular-sanitize/angular-sanitize.min.js",
                     "src/js/app.js",
                     "src/js/services.js",
-                    "src/js/controllers.js",
+                    "src/js/common/*.js",
+                    "src/js/controllers/*.js",
+                    "src/js/directives/*.js",
+                    "src/js/factories/*.js",
+                    "src/js/filters/*.js",
+                    "src/js/services/*.js"
                 ],
                 dest: 'public/js/production.js'
             }
@@ -218,7 +223,7 @@ module.exports = function(grunt) {
             },
             server: {
                 options: {
-                    title: 'Render',  // optional
+                    title: 'Scaffold',  // optional
                     message: 'Build is ready!',
                     duration: 3
                 }
@@ -243,20 +248,19 @@ module.exports = function(grunt) {
             generate: {
                 options: {
                     basePath: '',
-                    cache: ['public/js/app.js', 'public/css/app.css','public/css/*.html', 'public/img/*.png'],
                     network: ['http://*', 'https://*'],
                     fallback: ['/ /offline.html'],
-                    exclude: ['js/jquery.min.js'],
+                    exclude: [''],
                     preferOnline: true,
                     verbose: true,
                     timestamp: true,
-                    hash: true,
-                    master: ['public/index.html']
+                    hash: true
                 },
                 src: [
-                    'some_files/*.html',
-                    'js/*.min.js',
-                    'css/*.css'
+                    'public/*.html',
+                    'public/js/*.js',
+                    'public/css/*.css',
+                    'public/img/*.png'
                 ],
                 dest: 'public/manifest.appcache'
             }
@@ -346,7 +350,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-remove');
 
-    grunt.registerTask('default', ['remove', 'htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images' , 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
+    grunt.registerTask('default', ['remove', 'htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'responsive_images' , 'spritesheet:generate', 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server']);
     grunt.registerTask('production', ['remove', 'htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('serve:production', ['express:dev']);
