@@ -71,6 +71,11 @@ public/windows-tile-144x144-precomposed.png
 public/windows-tile-310x310-precomposed.png
 public/windows-tile-70x70-precomposed.png
 
+# Notes
+
+On Ubuntu you will need to install the following dependencies
+
+> sudo apt-get install graphicsmagick-imagemagick-compat
 
 
 

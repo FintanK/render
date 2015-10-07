@@ -116,13 +116,6 @@ module.exports = function(grunt) {
                 dest: 'public/js/production.js'
             }
         },
-        favicons: {
-            options: {},
-            icons: {
-                src: 'src/img/logo.png',
-                dest: 'public/img'
-            }
-        },
         spritesheet: {
             generate: {
 
@@ -350,12 +343,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-favicons');
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-remove');
 
-    grunt.registerTask('default', ['remove', 'htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images' , 'favicons:icons', 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
-    grunt.registerTask('production', ['remove', 'htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'favicons:icons', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server']);
+    grunt.registerTask('default', ['remove', 'htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images' , 'spritesheet:generate', 'newer:imagemin:dynamic','notify:server']);
+    grunt.registerTask('production', ['remove', 'htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'spritesheet:generate', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('serve:production', ['express:dev']);
     grunt.registerTask('page-test', ['pagespeed']);
