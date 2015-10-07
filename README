@@ -19,14 +19,12 @@ A Node.js and Grunt boilerplate that focuses on speed.
 # TO DO
 
 - Tidy up and verify meta tags, generate startup image for IOS when added to home screen.
-- Integrate spritesheet positions with SASS
-- Use the fullscreen API
-- WebP for Google Chrome, Opera and the native Android Browser.
-- Take a screenshot of the application running (Make sure phantom is installed and in the PATH)
+- Set up Angular
+- Use the Fullscreen API
 - Implement behavioural tests (protractor)
 - Implement Karma unit tests.
 - Implement JSHint for concatentated JS in development mode.
-- Output pagespeed results
+- Verify icons and ability to add to home screen on different devices.
 
 
 # Let's get started
