@@ -48,28 +48,17 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 
 3. Run the project
 
-This project runs on port 3000 for development purposes but feel free to change it for your own purposes (server.js)
+This project runs on port 3004 for development purposes but feel free to change it for your own purposes (server.js)
 
     > grunt serve
+    
+Debugger port: 5858
 
-# Generated Images
-
-The following images will be generated from src/logo.png and can be customized / removed depending on the needs of your project.
-
-public/favicon.png
-public/logo-small.png
-public/apple-touch-icon-152x152-precomposed.png
-public/apple-touch-icon-144x144-precomposed.png
-public/apple-touch-icon-120x120-precomposed.png
-public/apple-touch-icon-114x114-precomposed.png
-public/apple-touch-icon-76x76-precomposed.png
-public/apple-touch-icon-72x72-precomposed.png
-public/apple-touch-icon-60x60-precomposed.png
-public/apple-touch-icon.png
-public/windows-tile-150x150-precomposed.png
-public/windows-tile-144x144-precomposed.png
-public/windows-tile-310x310-precomposed.png
-public/windows-tile-70x70-precomposed.png
+![Express](http://nodejs-cloud.com/img/128px/expressjs.png)
+![Grunt](http://jackandrewread.com/img/skills/grunt.png)
+![Bower](http://www.robdudley.com/bower_grunt_yeoman/img/bower-logo.png)
+![Angular](http://share.2sic.com/share/Content/2dm-blogs/2014-10%20JS%20MVC/AngularJS-Square-250.png)
+![Node.js](https://www.a2hosting.com/images/uploads/landing_images/node.js-hosting.png)
 
 
 

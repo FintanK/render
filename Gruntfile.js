@@ -5,14 +5,6 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // watch assets, concatenate files compile Sass
-        remove: {
-            options: {
-              trace: true
-            },
-            fileList: ['public/logo-small.png', 'src/logo-small.png'],
-            dirList: []
-        },
         watch: {
             html: {
                 files: ['src/*.html'],

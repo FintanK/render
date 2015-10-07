@@ -11,8 +11,8 @@ public/css/sprites.css
 public/css/production.css
 public/css/production.css.map
 public/js/production.js
-public/img/logo.png
-public/img/logo*.png
+public/img/
+public/img/*.png
 public/img/apple-touch-icon.png
 public/img/apple-touch-icon-precomposed.png
 public/img/apple-touch-icon-60x60-precomposed.png
