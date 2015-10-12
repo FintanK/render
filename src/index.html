@@ -55,7 +55,7 @@
     <meta name='apple-mobile-web-app-status-bar-style' content='black'>
     <meta name='format-detection' content='telephone=no'>
 
-    <link href='/img/apple-touch-icon.png' rel='apple-touch-icon' type='image/png'>
+    <link href='img/apple-touch-icon.png' rel='apple-touch-icon' type='image/png'>
     <link href='img/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon' sizes='72x72'>
     <link href='img/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon' sizes='114x114'>
     <link href='img/startup.png' rel='apple-touch-startup-image'>
@@ -94,23 +94,27 @@
 
     <link rel="stylesheet" href="css/production.css">
 
+    <link rel="manifest" href="manifest.webmanifest">
+
 </head>
 <body ng-controller="MainController" manifest="manifest.appcache">
 <section id="welcome">
     <div class="container">
-        <div id="logo" class="col-sm-4">
+        <div class="row">
+            <div id="logo" class="col-sm-4">
 
-            <img src="/img/logo-small.png"></span>
+                <img src="/img/logo-small.png"></span>
 
-            <h1>Scaffold</h1>
-        </div>
-        <div class="col-sm-8">
-            <nav>
-                <ul>
-                    <li><a href="getstarted.html">Documentation</a></li>
-                    <li><a href="https://github.com/FintanK/scaffold">Github</a></li>
-                </ul>
-            </nav>
+                <h1>Scaffold</h1>
+            </div>
+            <div class="col-sm-8">
+                <nav>
+                    <ul>
+                        <li><a href="getstarted.html">Documentation</a></li>
+                        <li><a href="https://github.com/FintanK/scaffold">Github</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <div class="promo col-sm-12">
             <h1>A Node.js and Grunt boilerplate that's all about <strong>speed</strong> and <strong>performance</strong></h1>
@@ -119,11 +123,11 @@
             <p>Automate the task of ensuring your best practice web app is optimized for delivery to mobile, tablet and desktop. Reduce loading times and keep your users engaged.</p>
         </div>
         <div class="description download col-sm-12">
-            <button type="button" class="btn btn-default">Download v1.0.0</button>
-            <button type="button" class="btn btn-default">View on Github</button>
+            <a href="https://github.com/FintanK/scaffold/archive/master.zip" target="_blank"><button type="button" class="btn btn-default">Download v1.0.0</button></a>
+            <a href="https://github.com/FintanK/scaffold" target="_blank"><button type="button" class="btn btn-default">View on Github</button></a>
         </div>
-        <div>
-        </div></div></section>
+    </div>
+</section>
 
 <section id="features">
     <div class="container">

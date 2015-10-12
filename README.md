@@ -20,10 +20,10 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Development and production builds with a watcher to kick off builds when changes are made in development
 - Native notification when builds are completed.
 - Builds run against pagespeed for feedback on app performance
+- Favicons, IOS and Windows Tile Icons auto-generated.
 
 # TO DO
 
-- Generated images.
 - Tidy up and verify meta tags, generate startup image for IOS when added to home screen.
 - Set up Angular
 - Use the Fullscreen API

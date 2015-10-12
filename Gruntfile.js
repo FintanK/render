@@ -39,6 +39,23 @@ module.exports = function(grunt) {
                 }
             }
         },
+        favicons: {
+            options: {
+                trueColor: true,
+                precomposed: true,
+                appleTouchBackgroundColor: "#e2b2c2",
+                coast: true,
+                windowsTile: true,
+                tileBlackWhite: false,
+                tileColor: "auto",
+                html: 'public/index.html',
+                HTMLPrefix: "public/img/icons/"
+            },
+            icons: {
+                src: 'src/img/logo-small.png',
+                dest: 'public/img'
+            }
+        },
         concat: {
             css: {
                 src: [
@@ -294,8 +311,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.loadNpmTasks('grunt-favicons');
 
-    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'responsive_images' , 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server']);
+    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'responsive_images' , 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server', 'favicons']);
     grunt.registerTask('production', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'notify:server']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('serve:production', ['express:dev']);
