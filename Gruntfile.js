@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                 tileBlackWhite: false,
                 tileColor: "auto",
                 html: 'public/index.html',
-                HTMLPrefix: "img/icons/"
+                HTMLPrefix: "img/"
             },
             icons: {
                 src: 'src/img/logo-small.png',
