@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scaffold</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <meta name="description" content="A boilerplate app for frontend web development">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- IE -->
+    <meta http-equiv='Page-Enter' content='RevealTrans(Duration=2.0,Transition=2)'>
+    <meta http-equiv='Page-Exit' content='RevealTrans(Duration=3.0,Transition=12)'>
+    <meta name='mssmarttagspreventparsing' content='true'>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta name='msapplication-starturl' content='http://github.com/FintanK'>
+    <meta name='msapplication-window' content='width=800;height=600'>
+    <meta name='msapplication-navbutton-color' content='red'>
+    <meta name='application-name' content='Scaffold'>
+    <meta name='msapplication-tooltip' content='Launch Scaffold'>
+    <meta name='msapplication-task' content='name=About;action-uri=/about/;icon-uri=/images/about.ico'>
+    <meta name='msapplication-task' content='name=The Big List;action-uri=/the-big-list-of-javascript-css-and-html-development-tools-libraries-projects-and-books/;icon-uri=/images/list_links.ico'>
+    <meta name='msapplication-task' content='name=jQuery Posts;action-uri=/category/jquery/;icon-uri=/images/jquery.ico'>
+    <meta name='msapplication-task' content='name=Start Developing;action-uri=/category/javascript/;icon-uri=/images/script.ico'>
+    <meta name='msvalidate.01' content='6E3AD52DC176461A3C81DD6E98003BC9'>
+    <meta http-equiv='cleartype' content='on'>
+
+    <!-- Chrome for Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- OGP -->
+    <meta property="og:title" content="Scaffold">
+    <meta property="og:description" content="A boilerplate web app that focuses on speed.">
+    <meta property="og:image" content="/img/logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="450">
+    <meta property="og:image:height" content="358">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="Scaffold">
+    <meta name="”twitter:title”" content="”Scaffold”">
+    <meta name="”twitter:description”" content="”A boilerplate web app that focuses on speed.">
+    <meta name="”twitter:image”" content="Scaffold.png">
+
+    <!-- IOS -->
+    <meta name="apple-mobile-web-app-title" content="Scaffold"> <!-- New in iOS6 -->
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+    <meta name='format-detection' content='telephone=no'>
+
+    <link href='img/apple-touch-icon.png' rel='apple-touch-icon' type='image/png'>
+    <link href='img/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='img/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon' sizes='114x114'>
+    <link href='img/startup.png' rel='apple-touch-startup-image'>
+    <link href='img/apple-touch-icon-152x152-precomposed.png' sizes='152x152' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-144x144-precomposed.png' sizes='144x144' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-120x120-precomposed.png' sizes='120x120' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-114x114-precomposed.png' sizes='114x114' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-72x72-precomposed.png' sizes='72x72' rel='apple-touch-icon-precomposed'>
+    <link href='img/apple-touch-icon-60x60-precomposed.png' sizes='60x60' rel='apple-touch-icon-precomposed'>
+
+    <!-- Windows 8 Tiles -->
+    <meta name="application-name" content=" Contoso" />
+    <meta name="msapplication-TileColor" content=" #009900" />
+    <meta name="msapplication-square70x70logo" content="images/smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="images/mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="images/widetile.png" />
+    <meta name="msapplication-square310x310logo" content="images/largetile.png" />
+    <meta name="msapplication-notification" content="frequency=30; polling-uri=notifications/contoso1.xml;polling-uri2=notifications/contoso2.xml; polling-uri3=notifications/contoso3.xml" />
+
+    <!-- Dublin Core -->
+    <link rel="schema.DC" href="http://www.purl.org/dc/elements/1.1/" />
+    <meta name="DC.title" content="Scaffold"/>
+    <meta name="DC.creator" content="Fintan Kearney" />
+    <meta name="DC.subject" content="A boilerplate web app that focuses on speed" />
+    <meta name="DC.description" content="A boilerplate web app that focuses on speed" />
+    <meta name="DC.publisher" content="Fintan Kearney" />
+    <meta name="DC.contributor" content="Fintan Kearney" />
+    <meta name="DC.date" scheme="W3CDTF" content="2016-06-28" />
+    <meta name="DC.type" scheme="DCMIType" content="Text" />
+    <meta name="DC.format" scheme="IMT" content="text/html" />
+    <meta name="DC.identifier" content="/meta-tags/dublin/" />
+    <meta name="DC.source" content="/meta-tags/" />
+    <meta name="DC.language" scheme="RFC1766" content="en" />
+    <meta name="DC.relation" content="/meta-tags/" />
+    <meta name="DC.coverage" content="World" />
+
+    <link rel="stylesheet" href="css/production.css">
+
+    <link rel="manifest" href="manifest.webmanifest">
+
+</head>
+<body ng-controller="MainController" manifest="manifest.appcache">
+<section id="welcome">
+    <div class="container">
+        <div class="row">
+            <a id="logo" href="index.html" class="col-sm-4">
+
+                <img src="/img/logo.png"></span>
+
+                <h1>Scaffold</h1>
+            </a>
+            <div class="col-sm-8">
+                <nav>
+                    <ul>
+                        <li><a href="getstarted.html">Documentation</a></li>
+                        <li><a href="https://github.com/FintanK/scaffold">Github</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+         <div class="col-xs-12">
+             <p>Scaffold is a Node.js, NPM and Grunt boilerplate that focuses on automating many frontend tasks that optimize your application development, performance and user experience. It can be easily customized and built on.</p>
+             <h1>Prerequisites</h1>
+             <p>In order to use Scaffold you will need to have the following installed.</p>
+             <ul>
+                 <li>Node.js v0.10.32</li>
+                 <li>NPM v2.1.3</li>
+                 <li>Grunt v0.1.13</li>
+                 <li>Bower v1.5.3</li>
+             </ul>
+         </div>
+         <div class="col-xs-12">
+             <hr/>
+             <h1>Installation</h1>
+             <p>In the root directory</p>
+             <pre><code>npm install</code></pre>
+             <p>This project depends on a tool called ImageMagick for icon generation during the build process.</p>
+             <pre><code>brew install ImageMagick (OSX)</code></pre>
+             <pre><code>apt-get install imagemagick</code></pre>
+             <pre><code>apt-get install graphicsmagick-imagemagick-compat</code></pre>
+             <p>Install our dependencies using Bower</p>
+             <pre><code>bower install (load frontend dependencies)</code></pre>
+             <hr/>
+         </div>
+        <div class="col-xs-12">
+            <h1>Building your project</h1>
+            <p>With grunt installed. In the root directory run the following command.</p>
+            <pre><code>grunt</code></pre>
+
+            <img style="width: 100%" src="img/build.png" alt="" />
+
+            <hr/>
+
+            <h1>Features</h1>
+            
+            <p>The build process performs the following tasks.</p>
+            <ul>
+                <li>CSS / Javascript combination and minification.</li>
+                <li>SASS compiling</li>
+                <li>CSS vendor auto-prefixing for browser compatibility</li>
+                <li>Responsive images</li>
+                <li>Auto-generated manifest file</li>
+                <li>Favicon and IOS, Android and Windows tile icon generation from a single image (logo.png)</li>
+            </ul>
+
+            <p>There is also a production build which adds some additional steps.</p>
+
+            <ul>
+                <li>HTML minification</li>
+            </ul>
+
+            <hr/>
+
+            <h2>Additional</h2>
+            <ul>
+                <li>Watcher to reload changes made in development</li>
+                <li>Further compression of assets using express in gzip format</li>
+                <li>Favicons, IOS and Windows Tile Icons auto-generated.</li>
+                <li>Native notification when builds are completed.</li>
+            </ul>
+            <p>Note: All of these features can be customize by editing Gruntfile.js</p>
+            <hr/>
+            <p>You can also run your app against Google Pagespeed using Grunt</p>
+            <pre><code>grunt pagespeed</code></pre>
+        </div>
+
+        <div class="col-xs-12">
+            <h1>Running</h1>
+            <pre><code>grunt serve</code></pre>
+            <p>This project uses port 3004 out of the box.</p>
+        </div>
+
+    </div>
+</section>
+
+<script type="text/javascript" src="/js/production.js"></script>
+
+</body>
+</html>

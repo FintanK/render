@@ -20,10 +20,10 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Development and production builds with a watcher to kick off builds when changes are made in development
 - Native notification when builds are completed.
 - Builds run against pagespeed for feedback on app performance
+- Favicons, IOS and Windows Tile Icons auto-generated.
 
 # TO DO
 
-- Generated images.
 - Tidy up and verify meta tags, generate startup image for IOS when added to home screen.
 - Set up Angular
 - Use the Fullscreen API
@@ -62,6 +62,12 @@ This project runs on port 3004 for development purposes but feel free to change 
     > grunt serve
     
 Debugger port: 5858
+
+Pagespeed
+https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fscaffoldjs.com%3A3004%2F&tab=mobile
+
+Mobiready
+http://ready.mobi/index.jsp#11510-x1u1
 
 
 
