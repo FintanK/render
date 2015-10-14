@@ -30,7 +30,6 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Implement behavioural tests (protractor)
 - Implement Karma unit tests.
 - Implement JSHint for concatentated JS in development mode.
-- Verify icons and ability to add to home screen on different devices.
 
 
 # Let's get started
