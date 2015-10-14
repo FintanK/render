@@ -86,7 +86,7 @@ module.exports = function(grunt) {
                     style: 'expanded' // 'compressed'
                 },
                 files: {
-                    'public/css/production.css': 'src/css/production.scss'
+                    'src/css/production.css': 'src/css/production.scss'
                 }
             }
         },
@@ -287,8 +287,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-favicons');
 
-    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'responsive_images' , 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server', 'favicons']);
-    grunt.registerTask('production', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'favicons', 'notify:server']);
+    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'cssmin', 'autoprefixer:css', 'responsive_images' , 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server', 'favicons']);
+    grunt.registerTask('production', ['htmlmin:prod', 'concat',  'sass', 'cssmin', 'autoprefixer:css', 'uglify', 'responsive_images', 'newer:imagemin:dynamic','manifest:generate', 'favicons', 'notify:server']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('test', []);
 
