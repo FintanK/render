@@ -63,7 +63,11 @@ This project runs on port 3004 for development purposes but feel free to change 
     
 Debugger port: 5858
 
+Pagespeed
 https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fscaffoldjs.com%3A3004%2F&tab=mobile
+
+Mobiready
+http://ready.mobi/index.jsp#11510-x1u1
 
 
 
