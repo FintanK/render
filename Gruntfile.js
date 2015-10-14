@@ -52,7 +52,7 @@ module.exports = function(grunt) {
                 HTMLPrefix: "img/"
             },
             icons: {
-                src: 'src/img/logo-small.png',
+                src: 'src/img/logo.png',
                 dest: 'public/img'
             }
         },
@@ -237,18 +237,10 @@ module.exports = function(grunt) {
             },
             mobile: {
                 options: {
-                    url: "http://localhost:3004",
+                    url: "http://scaffoldjs.com:3004",
                     locale: "en_GB",
                     strategy: "mobile",
-                    threshold: 80
-                }
-            },
-            desktop: {
-                options: {
-                    paths: ["http://localhost:3004"],
-                    locale: "en_GB",
-                    strategy: "desktop",
-                    threshold: 80
+                    threshold: 60
                 }
             }
         },
@@ -272,24 +264,6 @@ module.exports = function(grunt) {
 
                     // Set --debug
                     debug: true
-                }
-            },
-            prod: {
-                options: {
-                    script: 'server.production.js',
-
-                    // Setting to `false` will effectively just run `node path/to/server.js`
-                    background: true,
-
-                    // Called when the spawned server throws errors
-                    fallback: function() {
-
-                    },
-
-                    port: 80,
-
-                    // Set --debug
-                    debug: false
                 }
             }
         }
@@ -316,8 +290,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'responsive_images' , 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server', 'favicons']);
     grunt.registerTask('production', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'favicons', 'notify:server']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
-    grunt.registerTask('serve:production', ['express:dev']);
-    grunt.registerTask('page-test', ['pagespeed']);
     grunt.registerTask('test', []);
 
 };
