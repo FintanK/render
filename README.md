@@ -14,13 +14,12 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Asset concatenation and minification
 - HTML minification for production builds if required.
 - SASS
-- Automatic CSS prefixing for browser compatibility
-- Auto-generated favicons, IOS icons, Win 8 tiles.
+- Automatic CSS prefixing for browser compatibility.
 - Further compression of assets using express in gzip format
 - Development and production builds with a watcher to kick off builds when changes are made in development
 - Native notification when builds are completed.
 - Builds run against pagespeed for feedback on app performance
-- Favicons, IOS and Windows Tile Icons auto-generated.
+- Favicons, IOS and Windows 8 Tile Icons auto-generated.
 
 # TO DO
 
