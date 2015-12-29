@@ -35,16 +35,18 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 
 1. Install dependencies ( --save writes to add dependencies to package.json )
 
+Note: You may need to install ruby on your system.
+
     > npm install
-    
+
     > npm install -g bower
-    
+
     > npm install -g grunt-cli
 
-    > brew install ImageMagick (OSX) 
-    
+    > brew install ImageMagick (OSX)
+
     > apt-get install imagemagick (Ubuntu)
-    
+
     > apt-get install graphicsmagick-imagemagick-compat
 
     > bower install (load frontend dependencies)
@@ -58,7 +60,7 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 This project runs on port 3004 for development purposes but feel free to change it for your own purposes (server.js)
 
     > grunt serve
-    
+
 Debugger port: 5858
 
 Pagespeed
@@ -66,7 +68,3 @@ https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fscaffol
 
 Mobiready
 http://ready.mobi/index.jsp#11510-x1u1
-
-
-
-
