@@ -37,6 +37,8 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 
 Note: You may need to install ruby on your system.
 
+    > gem install saas
+    
     > npm install
 
     > npm install -g bower
