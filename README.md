@@ -1,10 +1,14 @@
+![Website Screenshot](https://github.com/FintanK/scaffold/blob/master/nimbus-image-1458832715049.png)
+
+Official Website with Documentation: http://scaffoldjs.com
+
 ![Express](http://nodejs-cloud.com/img/128px/expressjs.png)
 ![Grunt](http://jackandrewread.com/img/skills/grunt.png)
 ![Bower](http://www.robdudley.com/bower_grunt_yeoman/img/bower-logo.png)
 ![Angular](http://share.2sic.com/share/Content/2dm-blogs/2014-10%20JS%20MVC/AngularJS-Square-250.png)
 ![Node.js](https://www.a2hosting.com/images/uploads/landing_images/node.js-hosting.png)
 
-# Scaffold
+# Scaffold.js
 
 A Node.js and Grunt boilerplate that focuses on automating many frontend tasks that optimize your application development, performance and user experience.
 
