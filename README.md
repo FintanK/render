@@ -33,6 +33,8 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Implement behavioural tests (protractor)
 - Implement Karma unit tests.
 - Implement JSHint for concatentated JS in development mode.
+- Web Components / Polymer
+- Manifest.json
 
 
 # Let's get started
