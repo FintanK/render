@@ -90,13 +90,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        autoprefixer: {
-            css: {
-                files: {
-                    'public/css/production.css': 'public/css/production.css'
-                }
-            }
-        },
         htmlmin: {
             prod: {
                 options: {
@@ -283,12 +276,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-pagespeed');
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-favicons');
 
-    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'autoprefixer:css', 'responsive_images' , 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server', 'favicons']);
-    grunt.registerTask('production', ['htmlmin:prod', 'concat', 'sass', 'autoprefixer:css', 'uglify', 'responsive_images', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'favicons', 'notify:server']);
+    grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'responsive_images' , 'newer:imagemin:dynamic', 'manifest:generate', 'notify:server', 'favicons']);
+    grunt.registerTask('production', ['htmlmin:prod', 'concat', 'sass', 'uglify', 'responsive_images', 'cssmin', 'newer:imagemin:dynamic','manifest:generate', 'favicons', 'notify:server']);
     grunt.registerTask('serve', ['express:dev', 'watch']);
     grunt.registerTask('test', []);
 
