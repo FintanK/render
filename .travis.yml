@@ -14,4 +14,4 @@ before_install:
   -  sudo apt-get install graphicsmagick-imagemagick-compat
 install:
   - bower install
-before_script: grunt
+before_script: grunt production
