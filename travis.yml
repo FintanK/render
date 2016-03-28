@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "4.4.1"
+before_install:
+  -  gem install sass
+  -  npm install
+  -  npm install -g bower
+  -  npm install -g grunt-cli
+  -  apt-get install imagemagick
+  -  apt-get install graphicsmagick-imagemagick-compat
+install:
+  - npm install
+  - bower install
+before_script: grunt
