@@ -44,11 +44,17 @@ Note: You may need to install ruby on your system.
 
     > gem install sass
 
-    > npm install
-
     > npm install -g bower
 
     > npm install -g grunt-cli
+
+    > npm install -g grunt-sass
+
+    > npm install -g node-sass
+
+    > npm install -g grunt
+
+    > npm install
 
     > brew install ImageMagick (OSX)
 
