@@ -3,13 +3,14 @@ node_js:
   - "5.1"
 before_install:
   -  gem install sass
+  -  npm cache -f clean
   -  npm install -g bower
   -  npm install -g grunt-cli
   -  npm install node-sass
+  -  npm install grunt
+  -  npm install
   -  sudo apt-get install imagemagick
   -  sudo apt-get install graphicsmagick-imagemagick-compat
-  -  npm cache -f clean
 install:
   - bower install
-  - npm install grunt
 before_script: grunt
