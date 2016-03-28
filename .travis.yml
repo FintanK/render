@@ -3,6 +3,7 @@ node_js:
   - "4.4.1"
 before_install:
   -  gem install sass
+  -  npm install -g npm
   -  npm install -g bower
   -  npm install -g grunt-cli
   -  npm install node-sas
