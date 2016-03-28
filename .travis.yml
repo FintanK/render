@@ -5,9 +5,9 @@ before_install:
   -  gem install sass
   -  npm install -g bower
   -  npm install -g grunt-cli
-  -  apt-get install imagemagick
-  -  apt-get install graphicsmagick-imagemagick-compat
+  -  sudo apt-get install imagemagick
+  -  sudo apt-get install graphicsmagick-imagemagick-compat
 install:
-  - npm install
-  - bower install
+  - sudo npm install
+  - sudo bower install
 before_script: grunt
