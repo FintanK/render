@@ -86,7 +86,7 @@ module.exports = function(grunt) {
                     style: 'expanded' // 'compressed'
                 },
                 files: {
-                    'public/css/production.css': 'src/css/production.scss'
+                    'src/css/production.css': 'src/css/production.scss'
                 }
             }
         },
