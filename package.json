@@ -27,7 +27,6 @@
     "grunt-pagespeed": "^0.3.0",
     "grunt-remove": "^0.1.0",
     "grunt-responsive-images": "^0.1.4",
-    "grunt-sass": "^0.16.1",
     "grunt-shell": "^1.1.1",
     "grunt-svgmin": "^1.0.0",
     "imagemagick": "^0.1.3",

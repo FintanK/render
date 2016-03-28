@@ -6,6 +6,7 @@ before_install:
   -  npm cache -f clean
   -  npm install -g bower
   -  npm install -g grunt-cli
+  -  npm install -g grunt-sass
   -  npm install -g node-sass
   -  npm install -g grunt
   -  npm install
