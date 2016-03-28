@@ -8,6 +8,6 @@ before_install:
   -  sudo apt-get install imagemagick
   -  sudo apt-get install graphicsmagick-imagemagick-compat
 install:
-  - npm install
+  - npm install -g
   - bower install
 before_script: grunt
