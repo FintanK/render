@@ -1,8 +1,8 @@
 # Scaffold.js ![](https://travis-ci.org/FintanK/scaffold.svg?branch=master)
 
-![Website Screenshot](https://github.com/FintanK/scaffold/blob/master/nimbus-image-1458832715049.png)
-
 Official Website with Documentation: http://scaffoldjs.com
+
+![Website Screenshot](https://github.com/FintanK/scaffold/blob/master/nimbus-image-1458832715049.png)
 
 ![Express](http://nodejs-cloud.com/img/128px/expressjs.png)
 ![Grunt](http://jackandrewread.com/img/skills/grunt.png)
