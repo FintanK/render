@@ -26,14 +26,17 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 
 # TO DO
 
+- Introduce Ionic
 - Tidy up and verify meta tags, generate startup image for IOS when added to home screen.
 - Set up Angular
+- Web Components / Polymer
 - Use the Fullscreen API
 - Implement behavioural tests (protractor)
 - Implement Karma unit tests.
 - Implement JSHint for concatentated JS in development mode.
-- Web Components / Polymer
 - Manifest.json
+- .manifest file
+- Offline first approach
 
 
 # Let's get started
