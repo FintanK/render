@@ -39,7 +39,9 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Offline first approach
 - Add to home screen
 - SEO
-
+- Improved documentation.
+- Build jobs to allow you to test on different devices in the cloud
+- Phonegap build task.
 
 # Let's get started
 
