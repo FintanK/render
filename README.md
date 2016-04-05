@@ -37,6 +37,8 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Manifest.json
 - .manifest file
 - Offline first approach
+- Add to home screen
+- SEO
 
 
 # Let's get started
