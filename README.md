@@ -44,6 +44,8 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Phonegap build task.
 - Splash screen
 - Ensure it works on desktop too.
+- CLI tool to customize scaffold tools and dependencies.
+- Convert to Yeoman generator
 
 
 # Let's get started
