@@ -31,7 +31,7 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Set up Angular
 - Web Components / Polymer
 - Use the Fullscreen API
-- Implement behavioural tests (protractor)
+- Implement behavioural tests (protractor) template
 - Implement Karma unit tests.
 - Implement JSHint for concatentated JS in development mode.
 - Manifest.json
@@ -47,6 +47,15 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - CLI tool to customize scaffold tools and dependencies.
 - Convert to Yeoman generator
 - Travis configuration / CI options.
+
+https://developer.lge.com/webOSTV/develop/web-app/getting-started/building-your-first-web-app-webos-tv/
+https://developer.mozilla.org/en-US/Marketplace/Options/Packaged_apps
+https://developer.chrome.com/apps/about_apps
+
+http://yeoman.io/authoring/
+http://code.tutsplus.com/tutorials/build-your-own-yeoman-generator--cms-20040
+
+Then publish NPM module.
 
 
 # Let's get started
