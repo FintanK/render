@@ -46,6 +46,7 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Ensure it works on desktop too.
 - CLI tool to customize scaffold tools and dependencies.
 - Convert to Yeoman generator
+- Travis configuration / CI options.
 
 
 # Let's get started
