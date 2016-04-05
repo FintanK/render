@@ -55,6 +55,9 @@ https://developer.chrome.com/apps/about_apps
 http://yeoman.io/authoring/
 http://code.tutsplus.com/tutorials/build-your-own-yeoman-generator--cms-20040
 
+Web developer checklists for inspiration
+http://webdevchecklist.com/
+
 Then publish NPM module.
 
 
