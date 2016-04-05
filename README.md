@@ -26,7 +26,7 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 
 # TO DO
 
-- Introduce Ionic
+- Introduce Ionic and Electron
 - Tidy up and verify meta tags, generate startup image for IOS when added to home screen.
 - Set up Angular
 - Web Components / Polymer
@@ -42,6 +42,9 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Improved documentation.
 - Build jobs to allow you to test on different devices in the cloud
 - Phonegap build task.
+- Splash screen
+- Ensure it works on desktop too.
+
 
 # Let's get started
 
