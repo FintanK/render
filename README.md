@@ -1,6 +1,6 @@
 # Scaffold.js ![](https://travis-ci.org/FintanK/scaffold.svg?branch=master)
 
-Note: This project is no longer being maintained. Scaffold version 2 is on the way ;) 
+Note: **This project is no longer being maintained** Scaffold version 2 is on the way ;) 
 
 Official Website with Documentation: http://scaffoldjs.com
 
