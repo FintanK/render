@@ -24,45 +24,6 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - Builds run against pagespeed for feedback on app performance
 - Favicons, IOS and Windows 8 Tile Icons auto-generated.
 
-# TO DO
-
-- Introduce Ionic and Electron
-- Tidy up and verify meta tags, generate startup image for IOS when added to home screen.
-- Set up Angular
-- Web Components / Polymer
-- Use the Fullscreen API
-- Implement behavioural tests (protractor) template
-- Implement Karma unit tests.
-- Implement JSHint for concatentated JS in development mode.
-- Manifest.json
-- .manifest file
-- Offline first approach
-- Add to home screen
-- SEO
-- Improved documentation.
-- Build jobs to allow you to test on different devices in the cloud
-- Phonegap build task.
-- Splash screen
-- Ensure it works on desktop too.
-- CLI tool to customize scaffold tools and dependencies.
-- Convert to Yeoman generator
-- Travis configuration / CI options.
-- Dockerfile
-- Heroku deployment
-
-https://developer.lge.com/webOSTV/develop/web-app/getting-started/building-your-first-web-app-webos-tv/
-https://developer.mozilla.org/en-US/Marketplace/Options/Packaged_apps
-https://developer.chrome.com/apps/about_apps
-
-http://yeoman.io/authoring/
-http://code.tutsplus.com/tutorials/build-your-own-yeoman-generator--cms-20040
-
-Web developer checklists for inspiration
-http://webdevchecklist.com/
-
-Then publish NPM module.
-
-
 # Let's get started
 
 1. Install dependencies ( --save writes to add dependencies to package.json )
