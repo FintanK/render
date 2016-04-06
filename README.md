@@ -47,6 +47,8 @@ A Node.js and Grunt boilerplate that focuses on automating many frontend tasks t
 - CLI tool to customize scaffold tools and dependencies.
 - Convert to Yeoman generator
 - Travis configuration / CI options.
+- Dockerfile
+- Heroku deployment
 
 https://developer.lge.com/webOSTV/develop/web-app/getting-started/building-your-first-web-app-webos-tv/
 https://developer.mozilla.org/en-US/Marketplace/Options/Packaged_apps
